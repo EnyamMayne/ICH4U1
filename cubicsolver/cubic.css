@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 100vh;
 }
 
 #app {
@@ -58,4 +58,28 @@ h1 {
     border-radius: 4px;
     font-size: 14px;
     cursor: pointer;
+}
+#results {
+    margin-top: 20px;
+}
+
+#results-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#results-table th {
+    background-color: orange;
+    color: white;
+    padding: 8px;
+    text-align: left;
+}
+
+#results-table td {
+    padding: 8px;
+    border-bottom: 1px solid grey;
+}
+
+#results-table tr:last-child td {
+    border-bottom: none;
 }
