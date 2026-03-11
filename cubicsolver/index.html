@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <title>Cubic Solver</title>
     <link rel="stylesheet" href="cubic.css" />
 </head>
+
 <body>
     <div id="app">
         <h1>Cubic Solver</h1>
@@ -27,7 +29,36 @@
             </div>
             <button id="solve-btn">Solve Cubic</button>
         </div>
+        <div id="results" style="display:none;">
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>x</th>
+                        <th>y</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Root 1</td>
+                        <td id="root1-x"></td>
+                        <td id="root1-y"></td>
+                    </tr>
+                    <tr>
+                        <td>Root 2</td>
+                        <td id="root2-x"></td>
+                        <td id="root2-y"></td>
+                    </tr>
+                    <tr>
+                        <td>Root 3</td>
+                        <td id="root3-x"></td>
+                        <td id="root3-y"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     <script type="module" src="cubic.ts"></script>
 </body>
+
 </html>
