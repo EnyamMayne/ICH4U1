@@ -12,7 +12,7 @@ solveBtn?.addEventListener("click", () => {
     const c = parseFloat(cInput?.value ?? "0");
     const d = parseFloat(dInput?.value ?? "0");
 
-    // calculate p, q and discriminant 
+    // calculate p, q and discriminant using Cardano's formula
     const p = (3 * a * c - b * b) / (3 * a * a);
     const q = (2 * b * b * b - 9 * a * b * c + 27 * a * a * d) / (27 * a * a * a);
     const discriminant = (q * q / 4) + (p * p * p / 27);
@@ -24,18 +24,18 @@ solveBtn?.addEventListener("click", () => {
         const root1 = u + v - b / (3 * a);
         const root2 = "Complex Number";
         const root3 = "Complex Number";
-        displayResults(root1, root2, root3);
+        displayResults(p, q, discriminant, root1, root2, root3);
         drawGraph(a, b, c, d);
 
-        // repeated roots
+    // repeated roots
     } else if (discriminant === 0) {
         const root1 = 2 * Math.cbrt(-q / 2) - b / (3 * a);
         const root2 = -Math.cbrt(-q / 2) - b / (3 * a);
         const root3 = root2;
-        displayResults(root1, root2, root3);
+        displayResults(p, q, discriminant, root1, root2, root3);
         drawGraph(a, b, c, d);
 
-        // three distinct real roots
+    // three distinct real roots
     } else {
         const r = Math.sqrt(-(p * p * p) / 27);
         const theta = Math.acos(-q / (2 * r));
@@ -43,18 +43,27 @@ solveBtn?.addEventListener("click", () => {
         const root1 = m * Math.cos(theta / 3) - b / (3 * a);
         const root2 = m * Math.cos((theta + 2 * Math.PI) / 3) - b / (3 * a);
         const root3 = m * Math.cos((theta + 4 * Math.PI) / 3) - b / (3 * a);
-        displayResults(root1, root2, root3);
+        displayResults(p, q, discriminant, root1, root2, root3);
         drawGraph(a, b, c, d);
     }
 });
 
-function displayResults(root1: number | string, root2: number | string, root3: number | string): void {
+function displayResults(p: number, q: number, discriminant: number, root1: number | string, root2: number | string, root3: number | string): void {
     // show the results table
     if (results) {
         results.style.display = "block";
     }
 
-    // grab the table cells
+    // fill in p, q and discriminant
+    const pCell = document.getElementById("p-value") as HTMLTableCellElement | null;
+    const qCell = document.getElementById("q-value") as HTMLTableCellElement | null;
+    const discCell = document.getElementById("discriminant-value") as HTMLTableCellElement | null;
+
+    if (pCell) pCell.innerText = p.toFixed(2);
+    if (qCell) qCell.innerText = q.toFixed(2);
+    if (discCell) discCell.innerText = discriminant.toFixed(2);
+
+    // grab the root table cells
     const root1x = document.getElementById("root1-x") as HTMLTableCellElement | null;
     const root2x = document.getElementById("root2-x") as HTMLTableCellElement | null;
     const root3x = document.getElementById("root3-x") as HTMLTableCellElement | null;
