@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: grey;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+#app {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    width: 900px;
+}
+
+h1 {
+    color: orange;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+#inputs {
+    display: flex;
+    align-items: flex-end;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
