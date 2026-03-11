@@ -4,7 +4,9 @@
 }
 
 body {
-    background-color: grey;
+    background-image: url('ppp.jpg');
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -30,7 +32,7 @@ h1 {
     display: flex;
     align-items: flex-end;
 }
-    
+
 .input-group {
     display: flex;
     flex-direction: column;
@@ -59,6 +61,7 @@ h1 {
     font-size: 14px;
     cursor: pointer;
 }
+
 #results {
     margin-top: 20px;
 }
