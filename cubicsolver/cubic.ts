@@ -27,7 +27,7 @@ solveBtn?.addEventListener("click", () => {
         displayResults(p, q, discriminant, root1, root2, root3);
         drawGraph(a, b, c, d);
 
-        // repeated roots
+    // repeated roots
     } else if (discriminant === 0) {
         const root1 = 2 * Math.cbrt(-q / 2) - b / (3 * a);
         const root2 = -Math.cbrt(-q / 2) - b / (3 * a);
@@ -35,7 +35,7 @@ solveBtn?.addEventListener("click", () => {
         displayResults(p, q, discriminant, root1, root2, root3);
         drawGraph(a, b, c, d);
 
-        // three distinct real roots
+    // three distinct real roots
     } else {
         const r = Math.sqrt(-(p * p * p) / 27);
         const theta = Math.acos(-q / (2 * r));
@@ -119,6 +119,11 @@ function drawGraph(a: number, b: number, c: number, d: number): void {
     // draw background
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, width, height);
+
+    // draw equation
+    ctx.fillStyle = "black";
+    ctx.font = "16px Arial";
+    ctx.fillText(`${a}x³ + ${b}x² + ${c}x + ${d} = 0`, 10, 20);
 
     const originX = width / 2;
     const originY = height / 2;
