@@ -24,7 +24,7 @@ function CubicInput({ onSave }: Props) {
                 <input
                     type="number"
                     value={a}
-                    onChange={(e) => setA(parseFloat(e.target.value) || 0)}
+                    onChange={(e) => setA(Number(e.target.value) || 0)}
                     className="border border-gray-400 rounded p-2 w-36"
                 />
             </div>
@@ -35,7 +35,7 @@ function CubicInput({ onSave }: Props) {
                 <input
                     type="number"
                     value={b}
-                    onChange={(e) => setB(parseFloat(e.target.value) || 0)}
+                    onChange={(e) => setB(Number(e.target.value) || 0)}
                     className="border border-gray-400 rounded p-2 w-36"
                 />
             </div>
@@ -46,7 +46,7 @@ function CubicInput({ onSave }: Props) {
                 <input
                     type="number"
                     value={c}
-                    onChange={(e) => setC(parseFloat(e.target.value) || 0)}
+                    onChange={(e) => setC(Number(e.target.value) || 0)}
                     className="border border-gray-400 rounded p-2 w-36"
                 />
             </div>
@@ -57,7 +57,7 @@ function CubicInput({ onSave }: Props) {
                 <input
                     type="number"
                     value={d}
-                    onChange={(e) => setD(parseFloat(e.target.value) || 0)}
+                    onChange={(e) => setD(Number(e.target.value) || 0)}
                     className="border border-gray-400 rounded p-2 w-36"
                 />
             </div>
