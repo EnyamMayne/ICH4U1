@@ -4,6 +4,7 @@ import CubicEquation from "./CubicEquation"
 import CubicTable from "./CubicTable"
 import CubicGraph from "./CubicGraph"
 import CubicHistory from "./CubicHistory"
+
 type HistoryEntry = {
   a: number
   b: number
@@ -12,7 +13,7 @@ type HistoryEntry = {
 }
 
 function App() {
-
+  
   const [a, setA] = useState(0)
   const [b, setB] = useState(0)
   const [c, setC] = useState(0)

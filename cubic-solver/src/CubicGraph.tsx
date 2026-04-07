@@ -8,7 +8,7 @@ type Props = {
     d: number
 }
 function CubicGraph({ a, b, c, d }: Props) {
-
+    
     const canvasRef = useRef<HTMLCanvasElement>(null)
 
     useEffect(() => {

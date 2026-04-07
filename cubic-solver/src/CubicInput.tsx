@@ -72,7 +72,7 @@ function CubicInput({ onSave }: Props) {
 
         </div>
     )
-
+    
 }
 
 export default CubicInput

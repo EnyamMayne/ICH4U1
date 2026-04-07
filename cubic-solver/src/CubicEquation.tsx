@@ -5,8 +5,8 @@ type Props = {
     c: number
     d: number
 }
-function CubicEquation({ a, b, c, d }: Props) {
-
+function CubicEquation({ a, b, c, d }: Props) 
+{
     return (
 
         <div className="text-center my-4">
@@ -15,8 +15,8 @@ function CubicEquation({ a, b, c, d }: Props) {
             </p>
 
         </div>
-    )
-
+   
+)
 }
 
 export default CubicEquation
