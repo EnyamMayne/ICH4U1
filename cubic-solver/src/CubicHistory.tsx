@@ -5,10 +5,12 @@ type HistoryEntry = {
     c: number
     d: number
 }
+
 type Props = {
     history: HistoryEntry[]
     onSelect: (entry: HistoryEntry) => void
 }
+
 function CubicHistory({ history, onSelect }: Props) {
     return (
         <div className="mt-6">

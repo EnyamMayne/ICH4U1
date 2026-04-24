@@ -1,4 +1,3 @@
-
 import { useRef, useEffect } from "react"
 
 type Props = {
@@ -7,6 +6,7 @@ type Props = {
     c: number
     d: number
 }
+
 function CubicGraph({ a, b, c, d }: Props) {
     
     const canvasRef = useRef<HTMLCanvasElement>(null)
