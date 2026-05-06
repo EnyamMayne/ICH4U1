@@ -1,10 +1,12 @@
 import { type VideosResponse } from '@/core';
 import { useTmdb } from '@/hooks';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 
 export const TrailersView = () => {
   const { id } = useParams();
-  const { data } = useTmdb<VideosResponse>(`https://api.themoviedb.org/3/movie/${id}/videos`, {});
+  const location = useLocation();
+  const mediaType = location.pathname.startsWith('/tv') ? 'tv' : 'movie';
+  const { data } = useTmdb<VideosResponse>(`https://api.themoviedb.org/3/${mediaType}/${id}/videos`, {});
 
   const trailers = (data?.results ?? []).filter((v) => v.site === 'YouTube');
 

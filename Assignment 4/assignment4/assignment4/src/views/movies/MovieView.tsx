@@ -25,7 +25,17 @@ export const MovieView = () => {
               <DetailItem label="Release" value={data.release_date} />
               <DetailItem label="Rating" value={data.vote_average} />
               <DetailItem label="Runtime" value={`${data.runtime} min`} />
-              <DetailItem label="Genres" value={data.genres.map((g) => g.name).join(', ')} />
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {data.genres.map((g) => (
+                <button
+                  key={g.id}
+                  onClick={() => navigate(`/genre/movie/${g.id}`)}
+                  className="rounded-full bg-gray-700 px-3 py-1 text-sm hover:bg-blue-500 transition"
+                >
+                  {g.name}
+                </button>
+              ))}
             </div>
             <LinkGroup
               options={[

@@ -25,7 +25,17 @@ export const TvView = () => {
               <DetailItem label="First Air Date" value={data.first_air_date} />
               <DetailItem label="Rating" value={data.vote_average} />
               <DetailItem label="Seasons" value={data.number_of_seasons} />
-              <DetailItem label="Genres" value={data.genres.map((g) => g.name).join(', ')} />
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {data.genres.map((g) => (
+                <button
+                  key={g.id}
+                  onClick={() => navigate(`/genre/tv/${g.id}`)}
+                  className="rounded-full bg-gray-700 px-3 py-1 text-sm hover:bg-blue-500 transition"
+                >
+                  {g.name}
+                </button>
+              ))}
             </div>
             <LinkGroup
               options={[
