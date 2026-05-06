@@ -6,7 +6,6 @@ export function useTmdb<T>(url: string, params: Record<string, unknown>) {
 
   useEffect(() => {
     const controller = new AbortController();
-
     const fetchData = async () => {
       try {
         const response = await axios.get<T>(url, {

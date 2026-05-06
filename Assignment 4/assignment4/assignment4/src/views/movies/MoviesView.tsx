@@ -16,7 +16,7 @@ export const MoviesView = () => {
   const [category, setCategory] = useState('now_playing');
   const [page, setPage] = useState(1);
   const { data } = useTmdb<MovieListResponse>(`https://api.themoviedb.org/3/movie/${category}`, { page });
-
+  console.log('API KEY:', import.meta.env.VITE_TMDB_API_KEY);
   const gridData: ImageCell[] = (data?.results ?? []).map((result) => ({
     id: result.id,
     imageUrl: getImageUrl(result.poster_path),
