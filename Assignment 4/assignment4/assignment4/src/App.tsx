@@ -30,7 +30,6 @@ export const App = () => {
       <Route path="/" element={<HomeView />} />
       <Route element={<MainLayout />}>
 
-        {/* Movies */}
         <Route path="/movies" element={<MoviesView />} />
         <Route path="/movie/:id" element={<MovieView />}>
           <Route path="credits" element={<CreditsView />} />
@@ -38,7 +37,6 @@ export const App = () => {
           <Route path="reviews" element={<ReviewsView />} />
         </Route>
 
-        {/* Television */}
         <Route path="/television" element={<TelevisionView />} />
         <Route path="/tv/:id" element={<TvView />}>
           <Route path="credits" element={<CreditsView />} />
@@ -48,17 +46,15 @@ export const App = () => {
         </Route>
         <Route path="/tv/:id/season/:seasonNumber/episode/:episodeNumber" element={<EpisodeView />} />
 
-        {/* Person */}
         <Route path="/person/:id" element={<PersonView />}>
           <Route path="career" element={<CareerView />} />
           <Route path="images" element={<ImagesView />} />
         </Route>
 
-        {/* Other */}
         <Route path="/trending" element={<TrendingView />} />
         <Route path="/genre/:mediaType/:id" element={<GenreView />} />
         <Route path="/search" element={<SearchView />} />
-
+        
       </Route>
       <Route path="*" element={<ErrorView />} />
     </Routes>
