@@ -14,12 +14,20 @@ export const Header = () => {
   };
 
   return (
-    <header className="bg-gray-800 px-5 py-3 flex items-center justify-between">
+    <header className="flex items-center justify-between bg-gray-800 px-5 py-3">
       <nav className="flex items-center gap-6 text-sm">
-        <button onClick={() => navigate('/movies')} className="hover:text-blue-400 transition">Movies</button>
-        <button onClick={() => navigate('/television')} className="hover:text-blue-400 transition">Television</button>
-        <button onClick={() => navigate('/genre')} className="hover:text-blue-400 transition">Genre</button>
-        <button onClick={() => navigate('/trending')} className="hover:text-blue-400 transition">Trending</button>
+        <button onClick={() => navigate('/movies')} className="transition hover:text-blue-400">
+          Movies
+        </button>
+        <button onClick={() => navigate('/television')} className="transition hover:text-blue-400">
+          Television
+        </button>
+        <button onClick={() => navigate('/genre')} className="transition hover:text-blue-400">
+          Genre
+        </button>
+        <button onClick={() => navigate('/trending')} className="transition hover:text-blue-400">
+          Trending
+        </button>
       </nav>
       <div onKeyDown={handleKeyDown}>
         <SearchBar value={query} onChange={setQuery} />

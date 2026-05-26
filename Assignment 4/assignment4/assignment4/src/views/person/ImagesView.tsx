@@ -19,11 +19,7 @@ export const ImagesView = () => {
   return (
     <section className="space-y-5 p-5">
       <h2 className="text-2xl font-bold">Images</h2>
-      {gridData.length ? (
-        <ImageGrid images={gridData} />
-      ) : (
-        <p className="text-center text-gray-400">No images available.</p>
-      )}
+      {gridData.length ? <ImageGrid images={gridData} /> : <p className="text-center text-gray-400">No images available.</p>}
     </section>
   );
 };

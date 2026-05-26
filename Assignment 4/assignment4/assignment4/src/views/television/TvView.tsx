@@ -31,7 +31,7 @@ export const TvView = () => {
                 <button
                   key={g.id}
                   onClick={() => navigate(`/genre/tv/${g.id}`)}
-                  className="rounded-full bg-gray-700 px-3 py-1 text-sm hover:bg-blue-500 transition"
+                  className="rounded-full bg-gray-700 px-3 py-1 text-sm transition hover:bg-blue-500"
                 >
                   {g.name}
                 </button>

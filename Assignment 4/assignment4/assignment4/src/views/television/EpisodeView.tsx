@@ -17,7 +17,7 @@ export const EpisodeView = () => {
 
   return (
     <div className="mx-auto max-w-4xl space-y-5 p-5">
-      <button className="text-sm text-gray-400 hover:text-white transition" onClick={() => navigate(-1)}>
+      <button className="text-sm text-gray-400 transition hover:text-white" onClick={() => navigate(-1)}>
         ← Back
       </button>
       <img className="w-full rounded-2xl object-cover" src={getBackdropUrl(data.still_path)} alt={data.name} />

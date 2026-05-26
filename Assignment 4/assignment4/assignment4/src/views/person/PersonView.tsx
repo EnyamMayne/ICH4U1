@@ -14,11 +14,11 @@ export const PersonView = () => {
 
   return (
     <Modal onClick={() => navigate(-1)}>
-      <div className="grid min-h-0 grid-cols-[auto_1fr] gap-5 p-5 h-full">
-        <img className="w-40 rounded-xl object-cover self-start" src={getImageUrl(data.profile_path)} alt={data.name} />
+      <div className="grid h-full min-h-0 grid-cols-[auto_1fr] gap-5 p-5">
+        <img className="w-40 self-start rounded-xl object-cover" src={getImageUrl(data.profile_path)} alt={data.name} />
         <div className="space-y-4 overflow-y-auto">
           <h1 className="text-3xl font-bold">{data.name}</h1>
-          <p className="leading-relaxed text-gray-300 line-clamp-6">{data.biography}</p>
+          <p className="line-clamp-6 leading-relaxed text-gray-300">{data.biography}</p>
           <div className="grid grid-cols-2 gap-4">
             <DetailItem label="Birthday" value={data.birthday} />
             <DetailItem label="Born In" value={data.place_of_birth} />

@@ -1,27 +1,27 @@
 import { MainLayout } from '@/layouts';
 import {
+  CareerView,
+  CreditsView,
+  EpisodeView,
+  ErrorView,
+  GenreView,
   // site
   HomeView,
-  ErrorView,
+  ImagesView,
   // movies
   MoviesView,
   MovieView,
-  CreditsView,
-  TrailersView,
-  ReviewsView,
-  // television
-  TelevisionView,
-  TvView,
-  SeasonsView,
-  EpisodeView,
   // person
   PersonView,
-  CareerView,
-  ImagesView,
+  ReviewsView,
+  SearchView,
+  SeasonsView,
+  // television
+  TelevisionView,
+  TrailersView,
   // other
   TrendingView,
-  GenreView,
-  SearchView,
+  TvView,
 } from '@/views';
 import { Route, Routes } from 'react-router-dom';
 export const App = () => {
@@ -29,7 +29,6 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<HomeView />} />
       <Route element={<MainLayout />}>
-
         <Route path="/movies" element={<MoviesView />} />
         <Route path="/movie/:id" element={<MovieView />}>
           <Route path="credits" element={<CreditsView />} />
@@ -54,7 +53,6 @@ export const App = () => {
         <Route path="/trending" element={<TrendingView />} />
         <Route path="/genre/:mediaType/:id" element={<GenreView />} />
         <Route path="/search" element={<SearchView />} />
-        
       </Route>
       <Route path="*" element={<ErrorView />} />
     </Routes>

@@ -36,8 +36,22 @@ export const TrendingView = () => {
     <section className="mx-auto max-w-7xl space-y-5 p-5">
       <h1 className="text-3xl font-bold">Trending</h1>
       <div className="flex gap-5">
-        <ButtonGroup value={mediaType} options={MEDIA_TYPES} onClick={(val) => { setMediaType(val); setPage(1); }} />
-        <ButtonGroup value={interval} options={INTERVALS} onClick={(val) => { setInterval(val); setPage(1); }} />
+        <ButtonGroup
+          value={mediaType}
+          options={MEDIA_TYPES}
+          onClick={(val) => {
+            setMediaType(val);
+            setPage(1);
+          }}
+        />
+        <ButtonGroup
+          value={interval}
+          options={INTERVALS}
+          onClick={(val) => {
+            setInterval(val);
+            setPage(1);
+          }}
+        />
       </div>
       <ImageGrid images={gridData} onClick={(image) => navigate(`/${mediaType}/${image.id}`)} />
       <Pagination page={page} maxPages={data.total_pages} onClick={setPage} />
