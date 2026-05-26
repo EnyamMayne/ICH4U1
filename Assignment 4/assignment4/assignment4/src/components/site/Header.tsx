@@ -18,6 +18,7 @@ export const Header = () => {
       <nav className="flex items-center gap-6 text-sm">
         <button onClick={() => navigate('/movies')} className="hover:text-blue-400 transition">Movies</button>
         <button onClick={() => navigate('/television')} className="hover:text-blue-400 transition">Television</button>
+        <button onClick={() => navigate('/genre')} className="hover:text-blue-400 transition">Genre</button>
         <button onClick={() => navigate('/trending')} className="hover:text-blue-400 transition">Trending</button>
       </nav>
       <div onKeyDown={handleKeyDown}>
