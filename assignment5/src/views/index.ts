@@ -15,3 +15,6 @@ export * from '@/views/television/EpisodeView';
 export * from '@/views/television/SeasonsView';
 export * from '@/views/television/TelevisionView';
 export * from '@/views/television/TvView';
+export * from '@/views/Assignment5views/CartView';
+export * from '@/views/Assignment5views/FavoritesView';
+export * from '@/views/Assignment5views/SettingsView';
