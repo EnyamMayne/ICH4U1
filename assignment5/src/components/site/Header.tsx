@@ -22,11 +22,17 @@ export const Header = () => {
         <button onClick={() => navigate('/television')} className="transition hover:text-blue-400">
           Television
         </button>
-        <button onClick={() => navigate('/genre')} className="transition hover:text-blue-400">
-          Genre
-        </button>
         <button onClick={() => navigate('/trending')} className="transition hover:text-blue-400">
           Trending
+        </button>
+        <button onClick={() => navigate('/cart')} className="transition hover:text-blue-400">
+          Cart
+        </button>
+        <button onClick={() => navigate('/favorites')} className="transition hover:text-blue-400">
+          Favorites
+        </button>
+        <button onClick={() => navigate('/settings')} className="transition hover:text-blue-400">
+          Settings
         </button>
       </nav>
       <div onKeyDown={handleKeyDown}>

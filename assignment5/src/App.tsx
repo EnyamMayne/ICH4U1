@@ -1,9 +1,11 @@
 import { MainLayout } from '@/layouts';
 import {
   CareerView,
+  CartView,
   CreditsView,
   EpisodeView,
   ErrorView,
+  FavoritesView,
   GenreView,
   // site
   HomeView,
@@ -16,6 +18,7 @@ import {
   ReviewsView,
   SearchView,
   SeasonsView,
+  SettingsView,
   // television
   TelevisionView,
   TrailersView,
@@ -24,6 +27,7 @@ import {
   TvView,
 } from '@/views';
 import { Route, Routes } from 'react-router-dom';
+
 export const App = () => {
   return (
     <Routes>
@@ -35,7 +39,6 @@ export const App = () => {
           <Route path="trailers" element={<TrailersView />} />
           <Route path="reviews" element={<ReviewsView />} />
         </Route>
-
         <Route path="/television" element={<TelevisionView />} />
         <Route path="/tv/:id" element={<TvView />}>
           <Route path="credits" element={<CreditsView />} />
@@ -44,15 +47,16 @@ export const App = () => {
           <Route path="seasons" element={<SeasonsView />} />
         </Route>
         <Route path="/tv/:id/season/:seasonNumber/episode/:episodeNumber" element={<EpisodeView />} />
-
         <Route path="/person/:id" element={<PersonView />}>
           <Route path="career" element={<CareerView />} />
           <Route path="images" element={<ImagesView />} />
         </Route>
-
         <Route path="/trending" element={<TrendingView />} />
         <Route path="/genre/:mediaType/:id" element={<GenreView />} />
         <Route path="/search" element={<SearchView />} />
+        <Route path="/cart" element={<CartView />} />
+        <Route path="/favorites" element={<FavoritesView />} />
+        <Route path="/settings" element={<SettingsView />} />
       </Route>
       <Route path="*" element={<ErrorView />} />
     </Routes>

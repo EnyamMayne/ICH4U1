@@ -1,11 +1,13 @@
 import { type ImageCell } from '@/core';
+import type { ReactNode } from 'react';
 
 type ImageGridProps = {
   images: ImageCell[];
   onClick?: (image: ImageCell) => void;
+  children?: (image: ImageCell) => ReactNode;
 };
 
-export const ImageGrid = ({ images, onClick }: ImageGridProps) => {
+export const ImageGrid = ({ images, onClick, children }: ImageGridProps) => {
   return (
     <div className="grid grid-cols-5 gap-5">
       {images.map((image) => (
@@ -15,6 +17,7 @@ export const ImageGrid = ({ images, onClick }: ImageGridProps) => {
           onClick={() => onClick?.(image)}
         >
           <img src={image.imageUrl} alt={image.primaryText} className="aspect-2/3 w-full object-cover" />
+          {children?.(image)}
           {(image.primaryText || image.secondaryText) && (
             <div className="flex flex-col p-3 text-center">
               {image.primaryText && <p className="truncate text-sm font-semibold">{image.primaryText}</p>}
