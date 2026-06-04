@@ -1,0 +1,14 @@
+copy context/FirebaseContext.ts
+copy context/FirebaseProvider.tsx
+copy context/index.ts
+
+delete context/UserContext.ts
+delete context/UserProvider.tsx
+
+copy hooks/useFirebaseContext.ts
+copy hooks/index.ts
+
+copy core/types/firebase.ts
+copy core/types/context.ts
+
+copy main.tsx
